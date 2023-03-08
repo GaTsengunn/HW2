@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS LAYOUT</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                font-family: 'Times New Roman', Times, serif;
+                padding: 10px;
+                background: rgb(212, 149, 119);
+            }
+            .header{
+                background-color: white;
+                padding: 30px;
+                text-align: center;
+                border-radius: 5px;
+                margin-bottom: 3px;
+            
+            }
+            .topnav{
+                overflow: hidden;
+                background-color: #94522c;
+                border-radius: 5px;
+                margin: 1px;
+            }
+            .topnav a{
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                
+            }
+            .topnav a:hover{
+                background-color: rgb(77, 39, 24);
+                color: white;
+            }
+            .column{
+                float: left;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .column.side{
+                width: 25%;
+                background-color: white;
+                margin: 3px;
+            }
+            .column.middle{
+                width: 49%;
+                background-color: white;
+                padding: 10px;
+                margin-top: 3px;
+            }
+            .row:after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and(max-width:800px) {
+                .column.side, .column.middle{
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+            .footer{
+                background-color: #94522c;
+                padding: 20px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            @media screen and (max-width: 400px) {
+                .topnav a{
+                    float: none;
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>CSS LAYOUT</h1>
+        </div>
+        <div class="topnav">
+            <a href="#">Menu</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="row">
+            <div class="column side">
+                <h2>Side</h2>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                
+            
+            </div>
+            <div class="column middle">
+                <h2>Main</h2>
+                <p>This is a middle column setion.</p>
+                <p>This is a middle column setion.</p>
+                <p>This is a middle column setion.</p>
+                <p>This is a middle column setion.</p>
+                <p>This is a middle column setion.</p>
+                <p>This is a middle column setion.</p>
+                <p>This is a middle column setion.</p>
+            </div>
+            <div class="column side">
+                <h2>Side</h2>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+                <p>This is a side column section.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+    </body>
+</html>

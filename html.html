@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML LAYOUT </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background-color: rgb(250, 236, 172);
+            }
+            header{
+                background-color: rgb(173, 113, 43);
+                padding: 35px;
+                text-align: center;
+                font-size: 35px;
+                color: white; 
+            }
+            nav{
+                float: right;
+                width: 30%;
+                height: 300px;
+                background-color: rgb(223, 165, 89);
+                padding: 20px;
+            }
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            article{
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: rgb(235, 183, 114);
+                height: 300px;
+                color: black;
+            }
+            section::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            footer{
+                background-color: rgb(173, 113, 43);
+                padding: 30px;
+                text-align: center;
+                color: white;
+                width: 100%;
+			    bottom: 0px;
+            }
+            @media(max-width:600px){
+                nav, article{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>HTML LAYOUT</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">ECN116</a></li>
+                    <li><a href="#">WEB231</a></li>
+                    <li><a href="#">SWE331</a></li>
+                    <li><a href="#">SWM231</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>ECN116</h1>
+                <p>Экономиксийн үндэс хичээлийг судалснаар та бүхэн эдийн засгийн үйл явдлыг микро болон макро экономиксийн онолд тулгуурлан тайлбарлах, учир шалтгааныг тодорхойлох, ажил, амьдралдаа энгийн түвшинд хэрэглэх мэдлэг, чадварыг олж авах болно. Үүний тулд хичээлийн видео лекц, семинарын материал, бусад бие даан хийх ажлуудыг өөрөө хийж гүйцэтгэх хэрэгтэй юм.</p>
+                <p>Хичээлд ашиглагдах видео лекц, семинарын материалыг цахим хэлбэрээр хангах хэдий ч, оюутнууд цахим орчинд байгаа маш олон нээлттэй эх үүсвэрүүдийг өөрсдөө бүтээлч хандаж ашиглах нь илүү өгөөжтэй юм.</p>
+            </article>
+        </section>
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </body>
+</html>
